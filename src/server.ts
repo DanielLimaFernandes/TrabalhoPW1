@@ -102,9 +102,6 @@ app.post('/petshops', (request: Request, response: Response) => {
         return;
     }
 
-    // Continue o processamento
-    response.status(200).json({ message: "CNPJ is valid" });
-
     const existingPetshop = petshops.find((shop) => shop.cnpj === cnpj);
 
     if (existingPetshop) {
